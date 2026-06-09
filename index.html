@@ -3,30 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TIC TAC TOE</title>
+    <title>Tic Tac Toe - Premium Edition</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <MAIN>
-        <h1>TIC TAC TOE</h1>
-        <div class="container">
-           <div class="game">
-            <BUTTON class="box"></BUTTON>
-            <BUTTON class="box"></BUTTON>
-            <BUTTON class="box"></BUTTON>
-            <BUTTON class="box"></BUTTON>
-            <BUTTON class="box"></BUTTON>
-            <BUTTON class="box"></BUTTON>
-            <BUTTON class="box"></BUTTON>
-            <BUTTON class="box"></BUTTON>
-            <BUTTON class="box"></BUTTON>
-           </div>
-
-
+    <main class="app-container">
+        <h1>Tic Tac Toe</h1>
+        
+        <div class="mode-container">
+            <button id="pvpMode" class="mode-btn active">Player vs Player</button>
+            <button id="pvcMode" class="mode-btn">Player vs AI</button>
         </div>
 
-    </MAIN>
+        <div class="status-container">
+            <h3 id="statusText">X's Turn</h3>
+        </div>
 
+        <div class="board-wrapper">
+            <div class="game-board">
+                <button class="box" data-index="0"></button>
+                <button class="box" data-index="1"></button>
+                <button class="box" data-index="2"></button>
+                <button class="box" data-index="3"></button>
+                <button class="box" data-index="4"></button>
+                <button class="box" data-index="5"></button>
+                <button class="box" data-index="6"></button>
+                <button class="box" data-index="7"></button>
+                <button class="box" data-index="8"></button>
+            </div>
+        </div>
 
-    <script src="app.js"> </script>
+        <div class="controls">
+            <button id="resetBtn" class="control-btn">Reset Game</button>
+        </div>
+
+        <!-- Glassmorphic Winner / Draw Announcement Modal -->
+        <div id="modalContainer" class="modal hide">
+            <div class="modal-content">
+                <h2 id="modalMsg">Player X Wins!</h2>
+                <button id="newGameBtn" class="control-btn">New Game</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
 </body>
 </html>
